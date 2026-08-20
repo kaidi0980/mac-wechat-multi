@@ -1,0 +1,6 @@
+interface:
+  display_name: "Mac 微信多开"
+  short_description: "在 macOS 上安全创建并启动本地微信副本（微信双开/多开）"
+  default_prompt: "Use $mac-wechat-multi to create a second WeChat app from the WeChat already installed on this Mac."
+policy:
+  allow_implicit_invocation: true
