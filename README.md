@@ -112,3 +112,22 @@ export PATH="/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 ```text
 请先阅读这个仓库的 README。只操作我本机已经安装的微信，不下载或上传微信 App，不修改原版微信，不读取钥匙串、聊天记录或登录数据。执行脚本前先告诉我将要做什么，完成后打开微信副本的扫码登录窗口。
 ```
+
+## 作为 Codex Skill 使用
+
+本仓库已经内置一个可复用的 Skill，目录如下：
+
+```text
+skills/mac-wechat-multi/
+├── SKILL.md
+├── agents/openai.yaml
+└── scripts/create-wechat-clone.sh
+```
+
+在支持自定义 Skill 的 Codex 中，把 `skills/mac-wechat-multi` 整个文件夹放进你的 Skill 目录，然后对 Codex 说：
+
+```text
+请使用 mac-wechat-multi Skill，在我这台 Mac 已经安装的微信基础上创建微信2。不要下载或上传微信 App，不修改原版微信，不读取聊天记录、钥匙串或登录数据。执行前先告诉我将要做什么。
+```
+
+Skill 只会调用本机脚本创建微信副本，不会把微信安装包上传到 GitHub。首次登录第二个账号通常仍需要扫码；原版微信无需退出。
